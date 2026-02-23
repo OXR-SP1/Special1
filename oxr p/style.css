@@ -1,0 +1,385 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+
+body { background-color: #080112; color: white; }
+
+/* القائمة العلوية */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 8%; background: #0000004d;
+}
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: #000000; }
+.logo img { width: 50px; }
+
+/* الهيرو */
+.hero {
+    height: 70vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; background: linear-gradient(rgba(8, 1, 18, 0.6), #080112), url('your-bg.jpg');
+    background-size: cover; background-position: center;
+}
+.hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.hero p { max-width: 700px; color: #bbb; margin-bottom: 25px; }
+.btn-login { background: #33cfff; border: none; padding: 12px 40px; color: white; border-radius: 5px; cursor: pointer; font-weight: bold; }
+
+/* قسم البثوث - نفس الصورة */
+.streamers-section { padding: 60px 10%; text-align: center; }
+.title { font-size: 28px; margin-bottom: 10px; }
+.subtitle { color: #aaa; margin-bottom: 40px; font-size: 14px; }
+
+.streamers-container {
+    display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+}
+
+/* تصميم الكارت العريض */
+.stream-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    width: 450px; /* عرض الكارت مثل الصورة */
+    height: 180px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    transition: 0.3s;
+}
+
+.avatar-wrapper {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 3px solid #81cbee; /* توهج بنفسجي */
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(51, 163, 255, 0.4);
+}
+
+.avatar-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.streamer-name { font-weight: bold; letter-spacing: 1px; }
+
+/* قسم المنصات */
+.social-stats {
+    display: flex; justify-content: center; gap: 80px;
+    padding: 60px 0; border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.stat-box h3 { font-size: 35px; color: white; }
+.stat-box p { color: #888; font-size: 14px; }
+
+/* تنسيق الحاوية الرئيسية للقائمة */
+.navbar {
+    width: 100%;
+    background: #44e9ff99; /* خلفية سوداء شفافة */
+    padding: 15px 0;
+    border-bottom: 1px solid #44e9ff99;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px; /* عرض القائمة */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر (اللوجو جهة والروابط جهة) */
+    align-items: center;
+    padding: 0 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* المسافة بين الروابط */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+/* تأثير الصفحة النشطة والتحويم (Hover) */
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #81cbee; /* اللون البنفسجي */
+}
+
+/* رسم الخط البنفسجي المتوهج تحت الكلمة */
+.nav-links a.active::after,
+.nav-links a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #81cbee;
+    box-shadow: 0 0 10px #81cbee; /* توهج الخط */
+    border-radius: 10px;
+}
+
+/* تنسيق اللوجو */
+.logo-text {
+    font-size: 28px;
+    font-weight: 900;
+    color: #81cbee;
+    text-shadow: 0 0 15px rgba(68, 243, 255, 0.6);
+}
+
+/* تنسيق رأس المتجر */
+.store-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #44e9ff99, transparent);
+}
+
+.store-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.purple-text { color: #81cbee; text-shadow: 0 0 15px #81cbee; }
+
+store-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.purple-text { color: #81cbee; text-shadow: 0 0 15px #81cbee; }
+
+/* حاوية المنتجات */
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 5%;
+    flex-wrap: wrap;
+}
+
+/* كارت المنتج */
+.product-card {
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: #81cbee;
+    box-shadow: 0 10px 30px #44e9ff99;
+}
+
+/* المنتج المميز (Featured) */
+.product-card.featured {
+    border: 2px solid #81cbee;
+    transform: scale(1.05);
+}
+.product-card.featured::before {
+    content: "الأكثر طلباً";
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: #81cbee;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.product-icon { font-size: 50px; margin-bottom: 20px; }
+.product-card h3 { margin-bottom: 15px; font-size: 20px; }
+.product-card p { color: #888; font-size: 14px; margin-bottom: 20px; height: 45px; }
+
+.price {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.buy-now {
+    background: transparent;
+    border: 2px solid #81cbee;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.buy-now:hover {
+    background: #81cbee;
+    box-shadow: 0 0 15px #81cbee;
+}
+
+/* تعريف حركة الظهور من الأسفل للأعلى */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* كلاس سيتم إضافته بواسطة JS عند التمرير */
+.reveal-card {
+    opacity: 0; /* البداية مختفي */
+}
+
+.reveal-card.active {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* أنيميشن نبض خفيف للأيقونات داخل الكروت */
+.product-icon {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* حاوية قسم الإدارة */
+.staff-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 900;
+}
+
+/* توزيع الشبكة */
+.staff-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* تصميم الكارت الفردي */
+.staff-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+}
+
+/* تصميم الدائرة كما في الصورة */
+.avatar-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #81cbee; /* إطار بنفسجي */
+    overflow: hidden;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* تأثير التوهج القوي */
+.active-glow {
+    box-shadow: 0 0 20px #44e9ff99;
+}
+
+/* نصوص الرتبة والاسم */
+.rank {
+    font-size: 10px;
+    color: #81cbee; /* لون الرتبة بنفسجي */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+body {
+    background-image: url('https://media.discordapp.net/attachments/1454454028292591697/1474776241293885553/BANNER.png?ex=699b13e7&is=6999c267&hm=108c5c137fb0f19a5f1be4143d207b4c6237453e08989c6edd1f6616d1e381f4&=&format=webp&quality=lossless');
+    background-size: cover;          /* تجعل الصورة تغطي كامل الشاشة */
+    background-position: center;     /* توسيط الصورة */
+    background-attachment: fixed;    /* لجعل الخلفية ثابتة عند التمرير */
+    background-repeat: no-repeat;    /* منع تكرار الصورة */
+}
+
+/* تعريف حركة الظهور */
+@keyframes pageEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(5px); /* لمسة سينمائية خفيفة */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* تطبيق الحركة على جسم الصفحة أو الحاوية الرئيسية */
+body {
+    animation: pageEntrance 0.8s ease-out forwards;
+    background-color: #0a0b10; /* تأكد أن لون الخلفية متناسق لمنع الوميض الأبيض */
+}
+
+/* حركة إضافية للأزرار والقوائم عند مرور الماوس */
+.nav-item, .button-special {
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff;
+    transform: scale(1.05);
+}
+
+/* تنسيق الحاوية الرئيسية للهيدر */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* يضع اللوجو في جهة والروابط في الجهة الأخرى */
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(10, 11, 16, 0.9); /* خلفية شفافة قليلاً */
+    flex-direction: row-reverse; /* لضمان البدء من اليمين (RTL) */
+}
+
+/* تنسيق اللوجو */
+.server-logo {
+    height: 60px; /* تحكم في الارتفاع حسب ذوقك */
+    width: auto;
+    cursor: pointer;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 212, 255, 0.4)); /* توهج بسيط */
+}
+
+/* تأثير عند تمرير الماوس على اللوجو */
+.server-logo:hover {
+    transform: scale(1.1) rotate(2deg); /* تكبير بسيط مع ميلان */
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8)); /* زيادة التوهج */
+}
+
+/* استجابة الجوال */
