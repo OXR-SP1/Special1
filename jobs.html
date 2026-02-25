@@ -31,7 +31,135 @@
     </div>
 </nav>
 
-soon
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم الوظائف</title>
+    <style>
+        :root {
+            --primary-bg: #162e35;
+            --card-bg: #162e35;
+            --accent-purple: ##44f3ff;
+            --text-color: #ffffff;
+            --btn-disabled: #6d2828;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #0b2636, #000000);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 0 0 10px var(--accent-purple);
+        }
+
+        .container {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-purple);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.6;
+            min-height: 80px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: var(--btn-disabled);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: not-allowed;
+            border: none;
+        }
+
+        .section-title {
+            margin-top: 40px;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent-purple);
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>وظائف سبيشل</h1>
+        <p>الرئيسية > وظائف سبيشل</p>
+    </div>
+
+    <h2 class="section-title">التقديم على الوظائف</h2>
+
+    <div class="container">
+        <div class="card">
+            <h2>شرطة سبيشل</h2>
+            <p>تقديم منتسبين شرطة سبيشل. انضم إلى القوة وحافظ على الأمن والنظام داخل المدينة.</p>
+            <button class="btn">مغلقة</button>
+        </div>
+
+        <div class="card">
+            <h2>اسعاف سبيشل</h2>
+            <p>ابحث عن الجرحى المصابين وانقذ أرواح الآخرين ومساعدة الناس في الحالات الطارئة.</p>
+            <button class="btn">مغلقة</button>
+        </div>
+
+        <div class="card">
+            <h2>محامين سبيشل</h2>
+            <p>للتقديم على رخصة المحاماة من نقابة محامين سبيشل التي تتيح لك مزاولة مهنة المحاماة نظامياً.</p>
+            <button class="btn">مغلقة</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
 
      <div class="footer">
             جميع الحقوق محفوظة لسيرفر سبيشل &copy; 2026

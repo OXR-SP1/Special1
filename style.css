@@ -152,7 +152,7 @@ store-hero h1 { font-size: 3rem; margin-bottom: 10px; }
 /* كارت المنتج */
 .product-card {
     background: #121212;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff0d;
     padding: 30px;
     border-radius: 20px;
     width: 300px;
@@ -319,7 +319,7 @@ store-hero h1 { font-size: 3rem; margin-bottom: 10px; }
 }
 
 body {
-    background-image: url('https://media.discordapp.net/attachments/1454454028292591697/1474776241293885553/BANNER.png?ex=699b13e7&is=6999c267&hm=108c5c137fb0f19a5f1be4143d207b4c6237453e08989c6edd1f6616d1e381f4&=&format=webp&quality=lossless');
+    background-image: url('https://h.top4top.io/p_3707du7kt1.png');
     background-size: cover;          /* تجعل الصورة تغطي كامل الشاشة */
     background-position: center;     /* توسيط الصورة */
     background-attachment: fixed;    /* لجعل الخلفية ثابتة عند التمرير */
@@ -383,3 +383,75 @@ body {
 }
 
 /* استجابة الجوال */
+
+/* حاوية الشبكة */
+.streams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    direction: rtl; /* ليكون الترتيب من اليمين لليسار */
+}
+
+/* تصميم الكارت الموحد */
+.stream-card {
+    background: #0b0e13;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #1a1f26;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stream-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* إطار الفيديوهات */
+.stream-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* علامة "مباشر" الاحترافية */
+.badge-live {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #00e701; /* لون كيك الأخضر */
+    color: black;
+    padding: 4px 10px;
+    font-weight: bold;
+    font-size: 11px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.yt-live {
+    background: #ff0000; /* لون يوتيوب الأحمر */
+    color: white;
+}
+
+/* تذييل الكارت */
+.stream-footer {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+    background: #141923;
+}
+
+.mini-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #00d2ff;
+}
+
+/* تأثير الإضاءة حسب المنصة */
+.kick-border:hover { border-color: #00e701; }
+.youtube-border:hover { border-color: #ff0000; }
